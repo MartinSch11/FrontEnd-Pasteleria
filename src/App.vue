@@ -1,26 +1,15 @@
 <template>
   <div id="app">
-    <Header />
-    <HeaderCarousel />
-    <ServicesSection />
-    <!-- Resto de tu aplicación -->
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import HeaderCarousel from './components/HeaderCarousel.vue';
-import ServicesSection from './components/ServicesSection.vue';
-
 export default {
-  components: {
-    Header,
-    HeaderCarousel,
-    ServicesSection
-  }
-};
+  name: 'App'
+}
 </script>
 
 <style>
-/* Estilos globales de la aplicación */
+/* Añade tus estilos globales aquí */
 </style>

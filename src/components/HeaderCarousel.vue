@@ -20,6 +20,7 @@
       </swiper-slide>
       <swiper-slide>
         <img src="../assets/imagen/pandulce.jpg" alt="Postre 3" />
+      </swiper-slide>
       </swiper>
   </section>
 </template>
