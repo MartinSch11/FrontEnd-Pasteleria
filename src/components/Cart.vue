@@ -43,7 +43,7 @@ export default {
   height: 100%;
   background-color: white;
   box-shadow: -2px 0 5px rgba(0,0,0,0.5);
-  transition: right 0.5s ease; /* Cambia la duración de 0.3s a 0.5s */
+  transition: right 0.4s ease; /* Cambia la duración de 0.3s a 0.5s */
   padding: 20px;
   box-sizing: border-box;
   z-index: 50; /* Por encima del modal */

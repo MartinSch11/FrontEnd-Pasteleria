@@ -6,7 +6,7 @@
     <nav>
       <ul class="flex text-lg space-x-12">
         <li>
-          <router-link to="/" class="link-container">Inicio</router-link>
+          <router-link to="/home" class="link-container">Inicio</router-link>
         </li>
         <li>
           <router-link to="/productos" class="link-container">Productos</router-link>
@@ -83,7 +83,7 @@ export default {
   width: 0%;
   height: 2px;
   background-color: #FFD700;
-  transition: width 0.3s ease;
+  transition: width 0.5s ease;
 }
 
 .link-container:hover::before {
