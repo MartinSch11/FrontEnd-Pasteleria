@@ -21,35 +21,47 @@
     </nav>
     <div class="flex flex-grow basis-0 justify-end items-center space-x-12">
       <div class="relative">
-        <div class="header__cart--notification absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</div>
-        <img src="../assets/imagen/shopping_bag_icon-white.svg" alt="Shopping Bag">
+        <div class="header__cart--notification absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">{{ cartItems.length }}</div>
+        <img src="../assets/imagen/icons/shopping-bag-white.svg" alt="Shopping Bag" class="cursor-pointer" @click="toggleCart">
       </div>
       <div class="relative">
         <img src="../assets/imagen/icons/avatar.svg" alt="Avatar" class="cursor-pointer" @click="toggleDropdown">
         <DropdownMenu :isVisible="isDropdownVisible" :isLoggedIn="isLoggedIn" />
       </div>
     </div>
-    <!-- Línea de hover en la parte inferior del header -->
-    <div class="line"></div>
+
+    <Cart :isCartOpen="isCartOpen" :cartItems="cartItems" @close="toggleCart"/>
+    <Modal :isVisible="isCartOpen" @close="toggleCart">
+      <!-- Contenido del modal, si lo deseas -->
+    </Modal>
   </header>
 </template>
 
 <script>
 import DropdownMenu from '../components/DropdownMenu.vue';
+import Cart from '../components/Cart.vue';
+import Modal from '../components/Modal.vue';
 
 export default {
   components: {
-    DropdownMenu
+    DropdownMenu,
+    Cart,
+    Modal
   },
   data() {
     return {
       isDropdownVisible: false,
-      isLoggedIn: false // Estado para verificar si el usuario ha iniciado sesión
+      isLoggedIn: false, // Estado para verificar si el usuario ha iniciado sesión
+      isCartOpen: false,
+      cartItems: [] // Estado para los artículos del carrito
     };
   },
   methods: {
     toggleDropdown() {
       this.isDropdownVisible = !this.isDropdownVisible;
+    },
+    toggleCart() {
+      this.isCartOpen = !this.isCartOpen;
     }
   }
 }
@@ -76,15 +88,5 @@ export default {
 
 .link-container:hover::before {
   width: 100%;
-}
-
-/* Estilos para la transición del menú desplegable */
-.line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #FFD700;
 }
 </style>

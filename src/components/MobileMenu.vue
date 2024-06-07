@@ -1,3 +1,4 @@
+<!-- src/components/MobileMenu.vue -->
 <template>
   <transition name="fade">
     <nav :key="menuKey" v-if="menuOpen" class="fixed top-0 left-0 h-full w-2/3 bg-gray-900 bg-opacity-90 py-4 px-4 z-50" id="mobileMenu">

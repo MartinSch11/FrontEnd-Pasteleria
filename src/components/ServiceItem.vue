@@ -1,3 +1,4 @@
+<!-- src/components/ServiceItem.vue -->
 <template>
   <div class="service-item-container text-center p-4 border rounded-lg">
     <div class="service-item flex items-center justify-center">

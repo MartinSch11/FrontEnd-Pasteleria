@@ -1,3 +1,4 @@
+<!-- src/components/ServiceSection.vue -->
 <template>
   <div data-store="banner-services" class="mt-5">
     <!-- Sección de servicios para escritorio -->

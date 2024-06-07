@@ -1,3 +1,4 @@
+<!-- src/components/MobileNavbar.vue -->
 <template>
   <header class="py-3 px-5 flex items-center fixed top-0 w-full z-50 bg-black bg-opacity-10 text-white sm:hidden" id="mobileNavbar">
     <div class="flex items-center space-x-4">
@@ -11,7 +12,7 @@
     <div class="flex items-center space-x-4 ml-auto">
       <div class="relative">
         <div class="header__cart--notification absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</div>
-        <img class="w-7 h-7 rounded-full" src="../assets/imagen/shopping_bag_icon-white.svg" alt="Shopping Bag">
+        <img class="w-7 h-7 rounded-full" src="../assets/imagen/icons/shopping-bag-white.svg" alt="Shopping Bag">
       </div>
       <img class="w-7 h-7 rounded-full" src="../assets/imagen/icons/avatar.svg" alt="Avatar">
     </div>

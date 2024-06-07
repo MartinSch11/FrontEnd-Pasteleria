@@ -1,3 +1,4 @@
+<!-- src/components/HeaderCarousel.vue -->
 <template>
   <section class="relative w-screen text-center overflow-hidden text-white fixed-height">
     <div class="absolute inset-0 z-10 flex flex-col items-center justify-center">
@@ -60,8 +61,9 @@ export default {
 }
 
 .swiper-slide img {
-  width: 100%;
+  width: 100vw; /* Asegúrate de que las imágenes no excedan el ancho de la pantalla */
   height: 100%;
   object-fit: cover;
+  display: block; /* Asegúrate de que las imágenes se comporten correctamente dentro de su contenedor */
 }
 </style>

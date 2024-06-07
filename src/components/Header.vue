@@ -1,3 +1,4 @@
+<!-- src/components/Header.vue -->
 <template>
   <header>
     <NavBar />

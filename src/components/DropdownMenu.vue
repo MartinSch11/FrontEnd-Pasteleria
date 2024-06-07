@@ -1,3 +1,4 @@
+<!-- src/components/DropdownMenu.vue -->
 <template>
     <transition name="fade-slide">
       <div v-if="isVisible" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50 py-2">

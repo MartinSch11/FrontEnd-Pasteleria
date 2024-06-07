@@ -1,3 +1,4 @@
+<!-- src/components/ServiceItemMobile.vue -->
 <template>
     <div class="swiper-slide">
       <div class="service-item-container text-center p-4 border rounded-lg">
