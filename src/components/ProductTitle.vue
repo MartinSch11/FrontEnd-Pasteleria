@@ -11,7 +11,7 @@
     </div>
 
     <div class="flex flex-col items-center justify-center pt-4">
-      <h1 class="text-[#CD1110] font-notoSansJP font-bold relative text-3xl">
+      <h1 class="text-[#CD1110] font-notoSansJP font-bold relative text-3xl sm">
         <span>PRODUCTOS</span>
       </h1>
     </div>
