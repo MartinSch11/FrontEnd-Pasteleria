@@ -5,6 +5,10 @@ import Productos from '../views/Productos.vue';
 
 const routes = [
   {
+    path: '/',
+    redirect: '/Home'
+  },
+  {
     path: '/Home',
     name: 'Home',
     component: Home
@@ -18,8 +22,8 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory('/'), // Ruta base directa
-    routes
-  });
+  history: createWebHistory('/FrontEnd-Pasteleria/'), // Ajusta esto según el nombre de tu repositorio
+  routes
+});
 
 export default router;
