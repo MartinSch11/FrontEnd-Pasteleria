@@ -6,8 +6,8 @@
         <img src="../assets/imagen/close-white.svg" alt="Cerrar" class="cursor-pointer" @click="toggleMobileMenu">
       </div>
       <ul class="flex flex-col text-lg space-y-4 mt-8">
-        <li><router-link to="/home" class="block py-2 px-4 text-white rounded hover:bg-gray-700 transition">Inicio</router-link></li>
-        <li><router-link to="/productos" class="block py-2 px-4 text-white rounded hover:bg-gray-700 transition">Productos</router-link></li>
+        <li><router-link to="/Home" class="block py-2 px-4 text-white rounded hover:bg-gray-700 transition">Inicio</router-link></li>
+        <li><router-link to="/Productos" class="block py-2 px-4 text-white rounded hover:bg-gray-700 transition">Productos</router-link></li>
         <li><router-link to="/nosotros" class="block py-2 px-4 text-white rounded hover:bg-gray-700 transition">Nosotros</router-link></li>
         <li><router-link to="/contacto" class="block py-2 px-4 text-white rounded hover:bg-gray-700 transition">Contacto</router-link></li>
       </ul>

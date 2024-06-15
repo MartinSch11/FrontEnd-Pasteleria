@@ -6,10 +6,10 @@
     <nav>
       <ul class="flex text-lg space-x-12">
         <li>
-          <router-link to="/home" class="link-container">Inicio</router-link>
+          <router-link to="/Home" class="link-container">Inicio</router-link>
         </li>
         <li>
-          <router-link to="/productos" class="link-container">Productos</router-link>
+          <router-link to="/Productos" class="link-container">Productos</router-link>
         </li>
         <li>
           <router-link to="/nosotros" class="link-container">Nosotros</router-link>
