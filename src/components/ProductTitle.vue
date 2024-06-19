@@ -5,8 +5,8 @@
 
     <div class="flex items-center justify-center pt-20">
       <div>
-        <a href="/home" class="text-sm font-notoSansJP">Inicio</a><span> > </span><span
-          class="text-sm font-medium font-notoSansJP">Productos</span>
+        <router-link to="/Home" class="text-sm font-notoSansJP">Inicio<span> > </span><span
+          class="text-sm font-medium font-notoSansJP">Productos</span></router-link>
       </div>
     </div>
 
