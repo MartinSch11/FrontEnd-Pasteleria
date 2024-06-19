@@ -1,4 +1,3 @@
-<!-- src/components/MobileNavbar.vue -->
 <template>
   <header class="py-3 px-5 flex items-center fixed top-0 w-full z-50 bg-black bg-opacity-10 text-white sm:hidden" id="mobileNavbar">
     <div class="flex items-center space-x-4">
@@ -12,7 +11,7 @@
     <div class="flex items-center space-x-4 ml-auto">
       <div class="relative" @click="toggleCart">
         <div class="header__cart--notification absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">0</div>
-        <img class="w-7 h-7 rounded-full cursor-pointer" src="../assets/imagen/icons/shopping-bag-white.svg" alt="Shopping Bag">
+        <img class="w-7 h-7 cursor-pointer" src="../assets/imagen/icons/shopping-bag-white.svg" alt="Shopping Bag">
       </div>
       <div class="relative">
         <img src="../assets/imagen/icons/avatar.svg" alt="Avatar" class="cursor-pointer" @click="toggleDropdown">
@@ -45,19 +44,25 @@ export default {
     return {
       menuOpen: false,
       isDropdownVisible: false,
-      isLoggedIn: false, // Estado para verificar si el usuario ha iniciado sesión
+      isLoggedIn: false,
       isCartOpen: false,
-      cartItems: [] // Estado para los artículos del carrito
+      cartItems: []
     };
   },
   methods: {
     toggleMobileMenu() {
+      if (this.isCartOpen) {
+        this.isCartOpen = false;
+      }
       this.menuOpen = !this.menuOpen;
     },
     toggleDropdown() {
       this.isDropdownVisible = !this.isDropdownVisible;
     },
     toggleCart() {
+      if (this.menuOpen) {
+        this.menuOpen = false;
+      }
       this.isCartOpen = !this.isCartOpen;
     }
   }
@@ -65,5 +70,5 @@ export default {
 </script>
 
 <style scoped>
-/* Añadir estilos aquí si es necesario */
+/* Aquí puedes agregar estilos adicionales si es necesario */
 </style>

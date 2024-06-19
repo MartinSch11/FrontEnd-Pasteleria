@@ -4,13 +4,15 @@
       <Header />
       <ProductTitle />
       <MobileFilterSection />
+      <ProductsSection />
     </div>
   </template>
   
   <script>
   import Header from '../components/Header.vue';
   import ProductTitle from '../components/ProductTitle.vue';
-  import MobileFilterSection from '../components/MobileFilterSection.vue';
+  import MobileFilterSection from '../components/FilterSection.vue';
+  import ProductSection from '../components/ProductsSection.vue';
 
   export default {
     name: 'Productos',

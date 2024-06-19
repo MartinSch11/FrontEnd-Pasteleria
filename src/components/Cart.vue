@@ -1,3 +1,4 @@
+<!--src/components/Cart.vue-->
 <template>
   <div :class="['cart', { open: isCartOpen }]" @click.self="closeCart">
     <div class="cart-content">
