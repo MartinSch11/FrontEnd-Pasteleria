@@ -1,3 +1,4 @@
+<!--src/components/FilterSection.vue-->
 <template>
   <div class="mr-5 ml-5 mt-5">
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-center">
