@@ -1,43 +1,91 @@
-<!--src/components/ProductsSection.vue-->
 <template>
-    <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 p-5">
-      <CategoryList class="hidden lg:block col-span-1" />
-      <div class="col-span-1 sm:col-span-2 lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <!-- Aquí irían los productos -->
-        <div v-for="product in products" :key="product.id" class="product-item">
-          <!-- Contenido del producto -->
-          <div class="border p-4">
-            <h3 class="font-bold">{{ product.name }}</h3>
-            <p>{{ product.description }}</p>
-            <p class="font-semibold">{{ product.price }}</p>
-          </div>
-        </div>
+  <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 p-5">
+    <!-- Mostrar CategoryList solo en escritorio -->
+    <div class="hidden lg:block col-span-1">
+      <CategoryList />
+    </div>
+    <div class="col-span-1 sm:col-span-2 lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- Aquí irían los productos -->
+      <ProductItem v-for="product in products" :key="product.id" :product="product" />
+    </div>
+
+    <!-- Modal para filtros en móvil y tablet -->
+    <div :class="['filter-modal', { open: isFilterOpen }]">
+      <div class="filter-content">
+        <button @click="toggleFilter"><img src="../assets/imagen/icons/arrow-right.svg" alt="Filtrar"></button>
+        <CategoryList />
       </div>
     </div>
-  </template>
-  
-  <script>
-  import CategoryList from './CategoryList.vue';
-  
-  export default {
-    components: {
-      CategoryList,
-    },
-    data() {
-      return {
-        products: [
-          // Tu array de productos
-          { id: 1, name: 'Producto 1', description: 'Descripción del producto 1', price: '$10' },
-          { id: 2, name: 'Producto 2', description: 'Descripción del producto 2', price: '$20' },
-          // Agrega más productos según sea necesario
-        ],
-      };
-    },
-  };
-  </script>
-  
-  <style scoped>
-  .product-item {
-    /* Estilos para cada producto */
+  </div>
+</template>
+
+<script>
+import CategoryList from './CategoryList.vue';
+import ProductItem from './ProductItem.vue';
+
+// Importar imágenes
+import brownieImage from '../assets/imagen/brownie.jpg';
+
+export default {
+  components: {
+    CategoryList,
+    ProductItem,
+  },
+  data() {
+    return {
+      isFilterOpen: false,
+      products: [
+        { id: 1, image: brownieImage, name: 'Producto 1', description: 'Descripción del producto 1', price: '$10' },
+        { id: 2, image: brownieImage, name: 'Producto 2', description: 'Descripción del producto 2', price: '$20' },
+        { id: 3, image: brownieImage, name: 'Producto 3', description: 'Descripción del producto 3', price: '$30' },
+        { id: 4, image: brownieImage, name: 'Producto 4', description: 'Descripción del producto 4', price: '$40' },
+        { id: 5, image: brownieImage, name: 'Producto 5', description: 'Descripción del producto 5', price: '$50' },
+        { id: 6, image: brownieImage, name: 'Producto 6', description: 'Descripción del producto 6', price: '$60' },
+        { id: 7, image: brownieImage, name: 'Producto 7', description: 'Descripción del producto 7', price: '$70' },
+        { id: 8, image: brownieImage, name: 'Producto 8', description: 'Descripción del producto 8', price: '$80' },
+      ],
+    };
+  },
+  methods: {
+    toggleFilter() {
+      this.isFilterOpen = !this.isFilterOpen;
+    }
   }
-  </style>
+}
+</script>
+
+<style scoped>
+.filter-modal {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.5s ease;
+  z-index: 60;
+  overflow-y: auto;
+}
+.filter-modal.open {
+  right: 0;
+}
+.filter-content {
+  padding: 20px;
+  box-sizing: border-box;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn img {
+  width: 16px;
+  height: auto;
+}
+</style>
