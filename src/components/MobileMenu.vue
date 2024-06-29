@@ -28,8 +28,8 @@ export default {
       menuItems: [
         { name: 'Inicio', link: '/Home' },
         { name: 'Productos', link: '/Productos' },
-        { name: 'Nosotros', link: '/nosotros' },
-        { name: 'Contacto', link: '/contacto' }
+        { name: 'Nosotros', link: '/Nosotros' },
+        { name: 'Contacto', link: '/Contacto' }
       ]
     };
   },

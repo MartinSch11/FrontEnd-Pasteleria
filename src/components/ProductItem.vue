@@ -1,8 +1,9 @@
+<!--src/components/ProductItem.vue-->
 <template>
     <div>
         <!-- Producto individual -->
         <div @click="openModal(product)"
-            class="product-item border p-3 bg-[#CD1110] rounded-2xl items-center cursor-pointer transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-[#B10E0E]">
+            class="product-item border p-3 bg-[#CD1110] rounded-2xl items-center cursor-pointer transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#B10E0E]">
             <img :src="product.image" alt="Imagen del producto" class="product-image rounded-lg mb-3">
             <h3 class="font-bold font-notoSansJP text-white text-center mb-2">{{ product.name }}</h3>
             <p class="font-semibold text-white mb-3 text-center">{{ product.price }}</p>
@@ -76,8 +77,7 @@ export default {
             this.quantity = 1;
         },
         addToCart(product, quantity) {
-            // Lógica para añadir al carrito
-            console.log(`Añadido ${quantity} de ${product.name} al carrito.`);
+            this.$store.dispatch('cart/addToCart', { ...product, quantity });
             this.closeModal();
         },
         increaseQuantity() {
@@ -110,7 +110,8 @@ export default {
 
 .modal-fade-enter-active,
 .modal-fade-leave-active {
-    transition: opacity 0.5s ease; /* Ajustamos la duración de la transición */
+    transition: opacity 0.5s ease;
+    /* Ajustamos la duración de la transición */
 }
 
 .modal-fade-enter,
@@ -122,6 +123,7 @@ export default {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
