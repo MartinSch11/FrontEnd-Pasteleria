@@ -2,7 +2,7 @@
 <template>
   <div :class="['mobile-menu', { open: menuOpen }]" @click.self="toggleMenu">
     <div class="menu-content">
-      <nav :key="menuKey" v-if="menuOpen" class="fixed top-0 left-0 h-full w-2/3 text-black bg-opacity-90 py-4 px-4 z-50" id="mobileMenu">
+      <nav :key="menuKey" v-if="menuOpen" class="fixed top-0 left-0 h-full w-2/3 text-black bg-opacity-90 py-4 px-4 z-55" id="mobileMenu">
         <div class="flex justify-end">
         </div>
         <ul class="flex flex-col text-lg space-y-4 mt-8 font-notoSansJP">

@@ -19,6 +19,9 @@ const mutations = {
       existingItem.quantity = quantity;
     }
   },
+  removeItem(state, itemId) {
+    state.items = state.items.filter(item => item.id !== itemId);
+  },
   clearCart(state) {
     state.items = [];
   }
@@ -30,6 +33,9 @@ const actions = {
   },
   updateItemQuantity({ commit }, payload) {
     commit('updateQuantity', payload);
+  },
+  removeCartItem({ commit }, itemId) {
+    commit('removeItem', itemId);
   },
   clearCart({ commit }) {
     commit('clearCart');
