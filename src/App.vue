@@ -12,11 +12,11 @@ export default {
 </script>
 
 <style>
-/* Añade tus estilos globales aquí */
+/* Estilos globales aquí */
 html, body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Evita el desbordamiento horizontal */
-  width: 100%; /* Asegura que el ancho del body y html no cause desbordamiento */
+  overflow-x: hidden;
+  width: 100%;
 }
 </style>

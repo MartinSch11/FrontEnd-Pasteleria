@@ -1,10 +1,10 @@
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-4 p-5">
+  <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 p-5">
     <!-- Mostrar CategoryList solo en escritorio -->
-    <div class="hidden lg:block col-span-1">
+    <div class="hidden lg:block">
       <CategoryList />
     </div>
-    <div class="col-span-1 sm:col-span-2 lg:col-span-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="col-span-1 sm:col-span-2 lg:col-span-4 md:grid-cols-3 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-4">
       <!-- Aquí irían los productos -->
       <ProductItem v-for="product in products" :key="product.id" :product="product" />
     </div>
@@ -35,14 +35,14 @@ export default {
     return {
       isFilterOpen: false,
       products: [
-        { id: 1, image: brownieImage, name: 'Producto 1', description: 'Descripción del producto 1', price: '$10' },
-        { id: 2, image: brownieImage, name: 'Producto 2', description: 'Descripción del producto 2', price: '$20' },
-        { id: 3, image: brownieImage, name: 'Producto 3', description: 'Descripción del producto 3', price: '$30' },
-        { id: 4, image: brownieImage, name: 'Producto 4', description: 'Descripción del producto 4', price: '$40' },
-        { id: 5, image: brownieImage, name: 'Producto 5', description: 'Descripción del producto 5', price: '$50' },
-        { id: 6, image: brownieImage, name: 'Producto 6', description: 'Descripción del producto 6', price: '$60' },
-        { id: 7, image: brownieImage, name: 'Producto 7', description: 'Descripción del producto 7', price: '$70' },
-        { id: 8, image: brownieImage, name: 'Producto 8', description: 'Descripción del producto 8', price: '$80' },
+        { id: 1, image: brownieImage, name: 'Producto 1', description: 'Descripción del producto 1', price: '10' },
+        { id: 2, image: brownieImage, name: 'Producto 2', description: 'Descripción del producto 2', price: '20' },
+        { id: 3, image: brownieImage, name: 'Producto 3', description: 'Descripción del producto 3', price: '30' },
+        { id: 4, image: brownieImage, name: 'Producto 4', description: 'Descripción del producto 4', price: '40' },
+        { id: 5, image: brownieImage, name: 'Producto 5', description: 'Descripción del producto 5', price: '50' },
+        { id: 6, image: brownieImage, name: 'Producto 6', description: 'Descripción del producto 6', price: '60' },
+        { id: 7, image: brownieImage, name: 'Producto 7', description: 'Descripción del producto 7', price: '70' },
+        { id: 8, image: brownieImage, name: 'Producto 8', description: 'Descripción del producto 8', price: '80' },
       ],
     };
   },
@@ -55,6 +55,14 @@ export default {
 </script>
 
 <style scoped>
+/* Reducir el padding en dispositivos móviles */
+@media (max-width: 640px) {
+  .product-item {
+    padding: 0.5rem; /* Ajustar el padding a 0.5rem */
+  }
+}
+
+/* Estilo existente */
 .filter-modal {
   position: fixed;
   top: 0;

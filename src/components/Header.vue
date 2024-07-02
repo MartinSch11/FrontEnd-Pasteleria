@@ -17,7 +17,7 @@ export default {
   components: {
     NavBar,
     MobileNavBar,
-    MobileMenu
+    MobileMenu,
   },
   methods: {
     toggleMobileMenu() {
@@ -25,9 +25,9 @@ export default {
       const overlay = document.getElementById('overlay');
       mobileMenu.classList.toggle('hidden');
       overlay.classList.toggle('hidden');
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style>
