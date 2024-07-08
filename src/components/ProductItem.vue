@@ -2,7 +2,7 @@
   <div>
     <!-- Producto individual -->
     <div @click="openModal(product)"
-      class="product-item border p-3 bg-[#CD1110] rounded-2xl items-center cursor-pointer transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#B10E0E] sm:max-w-36 sm:max-h-36 md:max-w-60 md:max-h-60">
+      class="product-item border p-3 bg-[#b22222] rounded-2xl items-center cursor-pointer transition ease-in-out duration-300 hover:scale-105 hover:shadow-lg hover:bg-[#B10E0E] sm:max-w-36 sm:max-h-36 md:max-w-60 md:max-h-60">
       <img :src="product.image" alt="Imagen del producto" class="product-image rounded-lg mb-3 md:max-w-48 md:max-h-48">
       <h3 class="font-bold font-notoSansJP text-white text-center mb-2">{{ product.name }}</h3>
       <p class="font-semibold text-white mb-3 text-center">${{ product.price }}</p>
@@ -17,7 +17,7 @@
       <img :src="selectedProduct.image" alt="Imagen del producto"
            class="rounded-lg mb-3 lg:w-1/2 md:max-w-96 md:max-h-96 md:mx-auto">
       <div class="lg:w-1/2 lg:pl-6 flex flex-col justify-center items-center md:text-center">
-        <h2 class="text-[#CD1110] uppercase text-m tracking-wide mb-3">Diseño de Sabores</h2>
+        <h2 class="text-[#CD1110] uppercase text-sm tracking-wide mb-3">Diseño de Sabores</h2>
         <h2 class="text-2xl mb-4">{{ selectedProduct.name }}</h2>
         <p class="text-sm text-gray-600 leading-6 mb-6">{{ selectedProduct.description }}</p>
         <div class="flex mb-6 items-center justify-center">
