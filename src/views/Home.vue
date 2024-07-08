@@ -4,6 +4,7 @@
         <HeaderCarousel />
         <ServicesSection />
         <!-- Resto de tu aplicación -->
+        <Footer />
     </div>
 </template>
 
@@ -11,13 +12,15 @@
 import Header from '../components/Header.vue';
 import HeaderCarousel from '../components/HeaderCarousel.vue';
 import ServicesSection from '../components/ServicesSection.vue';
+import Footer from '../components/Footer.vue';
 
 export default {
     name: 'Home',
     components: {
         Header,
         HeaderCarousel,
-        ServicesSection
+        ServicesSection,
+        Footer,
     }
 };
 </script>
