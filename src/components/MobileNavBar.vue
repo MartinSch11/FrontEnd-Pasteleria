@@ -14,7 +14,7 @@
     <div class="flex items-center space-x-4 ml-auto">
       <!-- Icono de carrito -->
       <div class="relative" @click="toggleCart">
-        <div class="header__cart--notification absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">{{ cartItems.length }}</div>
+        <div class="header__cart--notification absolute top-0 right-0 bg-[#951d1c] text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">{{ cartItems.length }}</div>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="w-8 h-8 cursor-pointer">
           <path stroke-linecap="round" stroke-linejoin="round"

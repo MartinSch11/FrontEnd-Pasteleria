@@ -11,7 +11,7 @@
     </div>
 
     <div class="flex flex-col items-center justify-center pt-4">
-      <h1 class="text-[#CD1110] font-notoSansJP font-bold relative text-3xl sm">
+      <h1 class="text-[#951d1c] font-notoSansJP font-bold relative text-3xl sm">
         <span>PRODUCTOS</span>
       </h1>
     </div>
@@ -29,7 +29,7 @@ export default {
 <style scoped>
 h1 {
   text-align: center;
-  border-bottom: 1px solid #CD1110;
+  border-bottom: 1px solid #951d1c;
   line-height: 0.1em;
   margin: 10px 0 20px;
   width: 100%;

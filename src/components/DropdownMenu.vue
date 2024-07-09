@@ -1,13 +1,13 @@
 <template>
   <div v-if="isVisible" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50" @click="handleBackgroundClick">
-    <div class="bg-white text-black border border-gray-300 rounded shadow-lg w-96" @click.stop>
+    <div class="bg-white text-black border border-gray-300 rounded shadow-lg w-96 font-notoSansJP" @click.stop>
       <div v-if="!isLoggedIn">
         <div class="flex justify-end p-2">
           <svg @click="closeMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 cursor-pointer">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </div>
-        <div class="p-6">
+        <div class="px-6 py-3">
           <h3 class="text-3xl font-bold mb-2 font-windSong text-[#951d1c] text-center">Diseño de Sabores</h3>
           <p class="mb-4">Iniciá sesión o registrate (es gratis)</p>
           <div class="flex justify-around mb-4">
@@ -34,8 +34,8 @@
             <div class="relative">
               <input id="email" name="email" aria-invalid="true" aria-required="true" required
                 class="block w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:border-blue-300"
-                placeholder=" " type="email" autocomplete="email" aria-label="CORREO ELECTRÓNICO" v-model="email">
-              <label for="email" class="absolute left-3 top-2 text-gray-500">CORREO ELECTRÓNICO<span class="text-red-500">*</span></label>
+                placeholder="Correo" type="email" autocomplete="email" aria-label="CORREO ELECTRÓNICO" v-model="email">
+              <label for="email" class="absolute left-3 top-2 text-gray-500"><span class="text-red-500"></span></label>
               <span aria-hidden="true" class="absolute right-3 top-2 text-red-500">
                 <svg class="w-4 h-4" aria-hidden="true">
                   <use xlink:href="#cross-small"></use>
