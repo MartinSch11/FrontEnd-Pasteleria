@@ -22,7 +22,7 @@
     <div class="flex flex-grow basis-0 justify-end items-center space-x-12">
       <div class="relative">
         <!-- Botón de carrito -->
-        <div class="header__cart--notification absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+        <div class="header__cart--notification absolute top-0 right-0 bg-[#951d1c] text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
           {{ cartItems ? cartItems.length : 0 }}
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 cursor-pointer" @click="toggleCart">
@@ -106,7 +106,7 @@ export default {
   position: absolute;
   top: -5px;
   right: -5px;
-  background-color: red;
+  background-color: #951d1c;
   color: white;
   border-radius: 50%;
   width: 16px;

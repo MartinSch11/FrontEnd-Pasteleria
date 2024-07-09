@@ -27,8 +27,7 @@
           </h4>
           <ul class="list-none p-0 m-0">
             <li><a href="/FrontEnd-Pasteleria/Home" class=" hover:text-[#951d1c] transition-colors">Inicio</a></li>
-            <li><a href="/FrontEnd-Pasteleria/Productos" class=" hover:text-[#951d1c] transition-colors">Productos</a>
-            </li>
+            <li><a href="/FrontEnd-Pasteleria/Productos" class=" hover:text-[#951d1c] transition-colors">Productos</a></li>
             <li><a href="/FrontEnd-Pasteleria/Nosotros" class=" hover:text-[#951d1c] transition-colors">Nosotros</a></li>
             <li><a href="/FrontEnd-Pasteleria/Contacto" class=" hover:text-[#951d1c] transition-colors">Contacto</a></li>
           </ul>

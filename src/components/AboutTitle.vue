@@ -1,21 +1,19 @@
 <template>
     <div class="mr-5 ml-5" id="container">
 
-        <div class="flex items-center justify-center pt-20">
-            <div>
-                <a href="/FrontEnd-Pasteleria//Home" class="text-sm font-notoSansJP">Inicio</a><span> > </span><span
-                    class="text-sm font-medium font-notoSansJP">Nosotros</span>
-            </div>
-        </div>
-
-        <div class="flex flex-col items-center justify-center pt-4">
-            <h1 class="text-[#CD1110] font-notoSansJP font-bold text-3xl flex items-center justify-center">
-                <div class="border-t border-[#CD1110] flex-grow"></div>
-                <span class="px-2">NOSOTROS</span>
-                <div class="border-t border-[#CD1110] flex-grow"></div>
-            </h1>
-        </div>
+<div class="flex items-center justify-center pt-20">
+    <div>
+        <a href="/FrontEnd-Pasteleria/Home" class="text-sm font-notoSansJP">Inicio</a><span> > </span><span
+            class="text-sm font-medium font-notoSansJP">Nosotros</span>
     </div>
+</div>
+
+<div class="flex flex-col items-center justify-center pt-4">
+    <h1 class="text-[#951d1c] font-notoSansJP font-bold relative text-3xl sm">
+        <span>NOSOTROS</span>
+    </h1>
+</div>
+</div>
 
     <div class="mt-4 mx-4 lg:mt-10 lg:mx-20 md:mt-10 md:mx-20 text-justify text-xl">
         <h2 class="font-notoSansJP text-center">
@@ -49,18 +47,18 @@
     </div>
 
     <div class="flex justify-center mt-10 mb-10">
-    <div class="flex flex-wrap justify-center text-center">
-        <div class="bg-[#CD1110] text-white p-4 mx-2 mb-2 max-w-xs md:max-w-none md:mx-4 md:mb-4 w-40">
-            <p>Contamos con una excelente atención al cliente</p>
-        </div>
-        <div class="bg-[#CD1110] text-white p-4 mx-2 mb-2 max-w-xs md:max-w-none md:mx-4 md:mb-4 w-40">
-            <p>Aceptamos Mercado Pago, Tarjetas de Crédito y Débito</p>
-        </div>
-        <div class="bg-[#CD1110] text-white p-4 mx-2 mb-2 max-w-xs md:max-w-none md:mx-4 md:mb-4 w-40">
-            <p>¡Productos disponibles en el local para compra inmediata!</p>
+        <div class="flex flex-wrap justify-center text-center">
+            <div class="bg-[#951d1c] text-white p-4 mx-2 mb-2 max-w-xs md:max-w-none md:mx-4 md:mb-4 w-40">
+                <p>Contamos con una excelente atención al cliente</p>
+            </div>
+            <div class="bg-[#951d1c] text-white p-4 mx-2 mb-2 max-w-xs md:max-w-none md:mx-4 md:mb-4 w-40">
+                <p>Aceptamos Mercado Pago, Tarjetas de Crédito y Débito</p>
+            </div>
+            <div class="bg-[#951d1c] text-white p-4 mx-2 mb-2 max-w-xs md:max-w-none md:mx-4 md:mb-4 w-40">
+                <p>¡Productos disponibles en el local para compra inmediata!</p>
+            </div>
         </div>
     </div>
-</div>
 
 </template>
 
@@ -72,12 +70,11 @@ export default {
 
 <style scoped>
 h1 {
+    text-align: center;
+    border-bottom: 1px solid #951d1c;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
     width: 100%;
-}
-
-h1 div:first-child,
-h1 div:last-child {
-    height: 1px;
 }
 
 h1 span {
