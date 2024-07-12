@@ -3,6 +3,7 @@
         <Header/>
         <HeaderCarousel />
         <ServicesSection />
+        <HomeBanner />
         <!-- Resto de tu aplicación -->
         <Footer />
     </div>
@@ -12,6 +13,7 @@
 import Header from '../components/Header.vue';
 import HeaderCarousel from '../components/HeaderCarousel.vue';
 import ServicesSection from '../components/ServicesSection.vue';
+import HomeBanner from '../components/HomeBanner.vue'
 import Footer from '../components/Footer.vue';
 
 export default {
@@ -20,6 +22,7 @@ export default {
         Header,
         HeaderCarousel,
         ServicesSection,
+        HomeBanner,
         Footer,
     }
 };
