@@ -1,4 +1,3 @@
-// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import Productos from '../views/Productos.vue';
@@ -8,7 +7,7 @@ import Contacto from '../views/Contacto.vue';
 const routes = [
   {
     path: '/',
-    redirect: '/Home' ,// Redirige la ruta raíz a '/Home'
+    redirect: '/Home',
   },
   {
     path: '/Home',
@@ -30,11 +29,10 @@ const routes = [
     name: 'Contacto',
     component: Contacto
   }
-  // Agrega más rutas según sea necesario
 ];
 
 const router = createRouter({
-  history: createWebHistory('/FrontEnd-Pasteleria/'), // Ajusta esto según el nombre de tu repositorio
+  history: createWebHistory('/FrontEnd-Pasteleria/'),
   routes
 });
 

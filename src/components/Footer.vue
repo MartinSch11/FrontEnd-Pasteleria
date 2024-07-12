@@ -26,10 +26,18 @@
             ¡Explorá!
           </h4>
           <ul class="list-none p-0 m-0">
-            <li><router-link to="/Home" class="hover:text-[#FAF298] transition-colors">Inicio</router-link> </li>
-            <li><router-link to="/Productos" class="hover:text-[#FAF298] transition-colors">Productos</router-link> </li>
-            <li><router-link to="/Nosotros" class="hover:text-[#FAF298] transition-colors">Nosotros</router-link> </li>
-            <li><router-link to="/Contacto" class="hover:text-[#FAF298] transition-colors">Contacto</router-link> </li>
+            <li>
+              <router-link to="/Home" class="hover:text-[#FAF298] transition-colors">Inicio</router-link>
+            </li>
+            <li>
+              <router-link to="/Productos" class="hover:text-[#FAF298] transition-colors">Productos</router-link>
+            </li>
+            <li>
+              <router-link to="/Nosotros" class="hover:text-[#FAF298] transition-colors">Nosotros</router-link>
+            </li>
+            <li>
+              <router-link to="/Contacto" class="hover:text-[#FAF298] transition-colors">Contacto</router-link>
+            </li>
           </ul>
         </div>
         <div class="w-1/4 px-4 mb-6 lg:mb-0 lg:text-base text-xs">
