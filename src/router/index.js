@@ -8,7 +8,7 @@ import Contacto from '../views/Contacto.vue';
 const routes = [
   {
     path: '/',
-    redirect: '/Home' // Redirige la ruta raíz a '/Home'
+    redirect: '/Home' ,// Redirige la ruta raíz a '/Home'
   },
   {
     path: '/Home',
