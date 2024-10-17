@@ -25,7 +25,9 @@ import ProductItem from './ProductItem.vue';
 
 // Importar imágenes
 import brownieImage from '../assets/imagen/brownie.jpg';
+import rogelImage from '../assets/imagen/rogel.jpg';
 import cookiesImage from '../assets/imagen/cookies.jpg';
+import roscaImage from '../assets/imagen/rosca.jpg';
 
 export default {
   components: {
@@ -36,10 +38,10 @@ export default {
     return {
       isFilterOpen: false,
       products: [
-        { id: 1, image: brownieImage, name: 'Brownie', description: 'De chocolate', price: '10' },
-        { id: 2, image: cookiesImage, name: 'Cookies', description: 'De chocolate. Se venden en bolsita de 5 unidades', price: '20' },
-        { id: 3, image: brownieImage, name: 'Producto 3', description: 'Descripción del producto 3', price: '30' },
-        { id: 4, image: brownieImage, name: 'Producto 4', description: 'Descripción del producto 4', price: '40' },
+        { id: 1, image: brownieImage, name: 'Brownie individual', description: 'De chocolate', price: '10' },
+        { id: 2, image: rogelImage, name: 'Torta rogel', description: 'Descripcion', price: '20' },
+        { id: 3, image: cookiesImage, name: 'Cookies', description: 'De chocolate con chips. Se venden en bolsita de 5 unidades', price: '30' },
+        { id: 4, image: roscaImage, name: 'Rosca', description: 'Descripcion', price: '40' },
         { id: 5, image: brownieImage, name: 'Producto 5', description: 'Descripción del producto 5', price: '50' },
         { id: 6, image: brownieImage, name: 'Producto 6', description: 'Descripción del producto 6', price: '60' },
         { id: 7, image: brownieImage, name: 'Producto 7', description: 'Descripción del producto 7', price: '70' },
