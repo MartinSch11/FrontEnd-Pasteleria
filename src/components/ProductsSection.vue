@@ -25,6 +25,7 @@ import ProductItem from './ProductItem.vue';
 
 // Importar imágenes
 import brownieImage from '../assets/imagen/brownie.jpg';
+import cookiesImage from '../assets/imagen/cookies.jpg';
 
 export default {
   components: {
@@ -35,8 +36,8 @@ export default {
     return {
       isFilterOpen: false,
       products: [
-        { id: 1, image: brownieImage, name: 'Producto 1', description: 'Descripción del producto 1', price: '10' },
-        { id: 2, image: brownieImage, name: 'Producto 2', description: 'Descripción del producto 2', price: '20' },
+        { id: 1, image: brownieImage, name: 'Brownie', description: 'De chocolate', price: '10' },
+        { id: 2, image: cookiesImage, name: 'Cookies', description: 'De chocolate. Se venden en bolsita de 5 unidades', price: '20' },
         { id: 3, image: brownieImage, name: 'Producto 3', description: 'Descripción del producto 3', price: '30' },
         { id: 4, image: brownieImage, name: 'Producto 4', description: 'Descripción del producto 4', price: '40' },
         { id: 5, image: brownieImage, name: 'Producto 5', description: 'Descripción del producto 5', price: '50' },
