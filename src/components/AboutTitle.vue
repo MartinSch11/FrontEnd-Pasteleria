@@ -17,7 +17,7 @@
 
     <div class="mt-4 mx-4 lg:mt-10 lg:mx-20 md:mt-10 md:mx-20 text-justify text-xl">
         <h2 class="font-notoSansJP text-center">
-            Con siete años de experiencia, nuestra pastelería es un oasis para los amantes de los dulces. Desde
+            Con ocho años de experiencia, nuestra pastelería es un oasis para los amantes de los dulces. Desde
             deliciosos pasteles hasta tentadores postres, cada producto es una obra maestra de sabor artesanal. Nuestro
             ambiente acogedor invita a todos a disfrutar de momentos de indulgencia y placer.
         </h2>
