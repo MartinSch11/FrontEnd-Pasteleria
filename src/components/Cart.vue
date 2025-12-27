@@ -175,6 +175,7 @@ export default {
     },
     proceedToCheckout() {
       // Lógica para proceder al checkout
+      this.$router.push('/Checkout');
       console.log('Proceder al checkout');
     },
     keepShopping() {
