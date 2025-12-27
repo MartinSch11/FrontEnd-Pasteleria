@@ -23,7 +23,7 @@
             <img src="../assets/imagen/postre2.jpg" alt="Postre" class="lg:w-52 lg:h-52 object-cover w-24 h-24 md:w-44 md:h-44">
         </div>
         <div>
-            <img src="../assets/imagen/cookies.jpg" alt="Cookies" class="lg:w-52 lg:h-52 object-cover w-24 h-24 md:w-44 md:h-44">
+            <img src="../assets/imagen/DSC_0158.JPG" alt="Postre" class="lg:w-52 lg:h-52 object-cover w-24 h-24 md:w-44 md:h-44">
         </div>
     </div>
 
