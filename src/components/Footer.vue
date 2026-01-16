@@ -46,7 +46,7 @@
           </h4>
           <div class="flex justify-center space-x-4 lg:text-base text-xs ">
             <a href="#"
-              class="w-10 h-10  hover:bg-[#951d1c] duration-700  flex items-center justify-center rounded-full transition-colors">
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-transparent hover:bg-[#951d1c] transition-colors duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24" fill="white"
                 class="lg:w-6 lg:h-6 w-4 h-4 md:w-5 md:h-5">
                 <path
@@ -56,7 +56,7 @@
 
             </a>
             <a href="https://www.instagram.com/disenosabores.posadas/"
-              class="w-10 h-10  hover:bg-[#951d1c] duration-700 flex items-center justify-center rounded-full transition-colors">
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-transparent hover:bg-[#951d1c] transition-colors duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24" fill="white"
                 class="lg:w-6 lg:h-6 w-4 h-4 md:w-5 md:h-5">
                 <path
@@ -65,7 +65,7 @@
               </svg>
             </a>
             <a href="https://www.facebook.com/Dsabores/"
-              class="w-10 h-10 hover:bg-[#951d1c] duration-700 flex items-center justify-center rounded-full transition-colors">
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-transparent hover:bg-[#951d1c] transition-colors duration-300">
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24" fill="white"
                 class="lg:w-6 lg:h-6 w-4 h-4 md:w-5 md:h-5">
                 <path

@@ -2,7 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import Productos from '../views/Productos.vue';
 import Nosotros from '../views/Nosotros.vue';
+import Cursos from '../views/Cursos.vue';
 import Contacto from '../views/Contacto.vue';
+import Checkout from '../views/Checkout.vue';
 
 const routes = [
   {
@@ -25,9 +27,19 @@ const routes = [
     component: Nosotros
   },
   {
+    path: '/Cursos',
+    name: 'Cursos',
+    component: Cursos
+  },
+  {
     path: '/Contacto',
     name: 'Contacto',
     component: Contacto
+  },
+  {
+    path: '/Checkout',
+    name: 'Checkout',
+    component: Checkout
   }
 ];
 

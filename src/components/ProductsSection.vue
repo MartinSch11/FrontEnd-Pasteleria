@@ -100,6 +100,12 @@ import CategoryList from './CategoryList.vue';
 import ProductItem from './ProductItem.vue';
 import api from '../services/api';
 
+// Importar imágenes
+import brownieImage from '../assets/imagen/brownie.jpg';
+import rogelImage from '../assets/imagen/rogel.jpg';
+import cookiesImage from '../assets/imagen/DSC_0132(1).jpg';
+import roscaImage from '../assets/imagen/rosca.jpg';
+
 export default {
   name: 'ProductsSection',
   components: {
