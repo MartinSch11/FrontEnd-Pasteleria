@@ -132,12 +132,12 @@
             <div class="flex items-center">
               <input
                 type="radio"
-                id="pago_mp"
+                id="pago_qr"
                 name="metodo_pago"
-                value="Mercado Pago"
+                value="QR"
                 class="h-5 w-5 text-[#951d1c] focus:ring-[#951d1c]"
               />
-              <label for="pago_mp" class="ml-2 text-base">Mercado Pago</label>
+              <label for="pago_qr" class="ml-2 text-base">QR</label>
             </div>
           </div>
 

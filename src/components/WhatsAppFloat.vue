@@ -1,10 +1,14 @@
 <template>
+  <div class="whatsapp-container">
+    <div class="whatsapp-message">
+      <span>¡Haz tu pedido ahora!</span>
+    </div>
     <a
       href="https://wa.me/+5493764508619"
       class="whatsapp-float"
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Contactar por WhatsApp"
+      aria-label="Contactar por WhatsApp - Haz tu pedido ahora"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -16,35 +20,98 @@
         />
       </svg>
     </a>
-  </template>
-  
-  <style scoped>
-  .whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25d366;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.2s;
-    z-index: 1000;
-    text-decoration: none;
+  </div>
+</template>
+
+<style scoped>
+.whatsapp-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.whatsapp-message {
+  background-color: #951d1c;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 25px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.whatsapp-message::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 20px;
+  border-width: 6px 6px 0;
+  border-style: solid;
+  border-color: #951d1c transparent transparent;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.whatsapp-float {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
+  text-decoration: none;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  width: 36px;
+  height: 36px;
+  fill: currentColor;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-message {
+    font-size: 12px;
+    padding: 8px 14px;
   }
   
-  .whatsapp-float:hover {
-    background-color: #128c7e;
-    transform: scale(1.1);
+  .whatsapp-message::after {
+    right: 15px;
   }
-  
-  .whatsapp-icon {
-    width: 36px;
-    height: 36px;
-    fill: currentColor;
-  }
-  </style>
+}
+</style>
