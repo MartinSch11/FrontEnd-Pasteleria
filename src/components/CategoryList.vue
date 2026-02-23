@@ -3,13 +3,25 @@
     <span class="lg:hidden text-lg font-bold mb-2">FILTRAR POR:</span>
     <div>
       <h3 class="font-semibold text-lg mb-3 hidden sm:block md:hidden">FILTROS</h3>
+      
       <div class="flex flex-wrap items-center mb-4">
         <h4 class="font-semibold text-m mb-3 mr-2">Categorias</h4>
-        <ul class="m-2 flex flex-wrap">
+        
+        <div v-if="loading" class="text-sm text-gray-500 m-2">Cargando...</div>
+
+        <ul v-else class="m-2 flex flex-wrap">
+          <li class="category-item-desktop cursor-pointer m-2 border-2 hover:bg-gray-100"
+              @click="seleccionarCategoria(null)">
+             Todas
+          </li>
+
           <li
             class="category-item-desktop transition ease-in-out delay-150 hover:scale-110 hover:border-black duration-300 border-t-2 border-r-2 border-b-4 border-l-2 cursor-pointer m-2"
-            v-for="(category, index) in categories" :key="index">
-            {{ category }}
+            v-for="category in categories" 
+            :key="category.id"
+            @click="seleccionarCategoria(category)">
+            
+            {{ category.nombre }}
           </li>
         </ul>
       </div>
@@ -18,28 +30,41 @@
 </template>
 
 <script>
+import api from '../services/api'; // Importamos el servicio
+
 export default {
   name: 'CategoryList',
   data() {
     return {
-      categories: [
-        'Tortas', 'Tartas', 'Budines', 'Alfajores',
-        'Cookies', '¡Adorná tu postre!', '¡Armá tu desayuno!'
-      ],
+      categories: [], // Empieza vacío
+      loading: true,
       minPrice: null,
       maxPrice: null
     };
   },
-  computed: {
-    isValidPriceRange() {
-      return (this.minPrice !== null && this.maxPrice !== null && this.minPrice <= this.maxPrice);
+  async mounted() {
+    try {
+      // Pedimos las categorías a Java
+      const response = await api.getCategorias();
+      this.categories = response.data;
+    } catch (error) {
+      console.error("Error cargando categorías:", error);
+    } finally {
+      this.loading = false;
     }
   },
-  methods: {}
+  methods: {
+    seleccionarCategoria(categoria) {
+      // Acá a futuro emitimos al padre para filtrar los productos
+      console.log("Categoría seleccionada:", categoria ? categoria.nombre : 'Todas');
+      this.$emit('filter-category', categoria ? categoria.id : null);
+    }
+  }
 };
 </script>
 
 <style scoped>
+/* Tus estilos se mantienen igual */
 .category-item-desktop {
   position: relative;
   display: inline-block;
